@@ -12,9 +12,8 @@ vector<string> EnvoirmentBlocks(vector<string>& userFile)
 
 	for (int i = 0; i < userFile.size(); i++) {
 		if (userFile[i].find(findBegin) != string::npos) {
-
 			int spacesThisLine = CountWordInLine(userFile[i], insertTab);
-			int spacesNextLine = CountWordInLine(userFile[i+1], insertTab);
+			int spacesNextLine = CountWordInLine(userFile[i + 1], insertTab);
 
 			if (spacesThisLine == spacesNextLine)
 				beginIndexes.push_back(i);
@@ -23,7 +22,6 @@ vector<string> EnvoirmentBlocks(vector<string>& userFile)
 
 	for (int i = 0; i < userFile.size(); i++) {
 		if (userFile[i].find(findEnd) != string::npos) {
-
 			int spacesThisLine = CountWordInLine(userFile[i], insertTab);
 			int spacesLineBefore = CountWordInLine(userFile[i - 1], insertTab);
 
